@@ -10,6 +10,9 @@ export default {
       colors: {
         primary: "#0F44CD",
       },
+      screens: {
+        sm: '400px'
+      }
     },
   },
   plugins: [],

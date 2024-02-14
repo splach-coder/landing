@@ -21,9 +21,14 @@ const ImageModal = ({ modal, closeModal, img }) => {
   return (
     <div
       onClick={handleClickOutside}
-      className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 overflow-hidden cursor-pointer  ${
+      className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 overflow-hidden cursor-pointer  ${
         modal ? "flex" : "hidden"
       } justify-center items-center z-50`}>
+      <span
+        className="absolute top-2 right-2 font-primary text-2xl text-white bg-gray-500 bg-opacity-30 w-[30px] h-[30px] rounded-[50%] cursor-pointer flex justify-center items-center"
+        onClick={closeModal}>
+        &times;
+      </span>
       <div
         ref={innerRef}
         className="relative w-[80%] h-[80%] overflow-hidden cursor-zoom-in"

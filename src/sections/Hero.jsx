@@ -15,7 +15,9 @@ const Hero = ({ openModal }) => {
         <Header />
         <main className="flex flex-col justify-center items-center gap-7 w-full font-primary h-[55vh] md:h-[65vh]">
           {isMobile ? (
-            <h1 className="font-bold text-[40px]  leading-[60px]  md:leading-[75px] md:text-[60px] text-center text-white">
+            <h1
+              className="font-bold text-[30px]  
+            leading-[45px]  md:leading-[75px] md:text-[60px] text-center text-white">
               <span className="font-black text-4xl tracking-tighter">
                 <AnimatedTexts text="TrimDown " />
               </span>

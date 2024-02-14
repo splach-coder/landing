@@ -105,7 +105,7 @@ const Calculator = () => {
   };
 
   return (
-    <section className="h-[70vh] md:h-[80vh] firstSection relative overflow-hidden">
+    <section className="min-h-[70vh] py-5 sm:p-0 md:h-[80vh] firstSection relative overflow-hidden">
       <div className="wave2 first">
         <svg
           data-name="Layer 1"
@@ -118,7 +118,7 @@ const Calculator = () => {
         </svg>
       </div>
 
-      <div className="con mt-10 pt-10" ref={ref}>
+      <div className="con mt-10 pt-0 md::pt-10" ref={ref}>
         <div className="md:px-20 md:py-10 flex items-center justify-between">
           <motion.div
             ref={elementRef}

@@ -56,7 +56,6 @@ function App() {
   const openImageModal = (img) => {
     setImageModal(true);
     setImageInModal(img);
-    setFirstLoad(false);
   };
 
   const closeImageModal = () => {
@@ -71,7 +70,7 @@ function App() {
       <Hero openModal={openModal} />
 
       <iframe
-        className="absolute left-[50%] translate-x-[-50%] top-[60vh] md:top-[80vh] md:border-[15px] border-white rounded-md md:shadow-md shadow-gray-500 w-full h-[300px] md:w-[750px] md:h-[400px] p-3 md:p-0"
+        className="absolute left-[50%] translate-x-[-50%] top-[65vh] sm:top-[60vh] md:top-[80vh] md:border-[15px] border-white rounded-md md:shadow-md shadow-gray-500 w-full h-[300px] md:w-[750px] md:h-[400px] p-3 md:p-0"
         src="https://www.youtube.com/embed/Y6JrvphGLaY?si=f53o93NnO1ZO3I60"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

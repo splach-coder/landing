@@ -59,7 +59,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="firstSection h-[65vh] md:h-[80vh] px-3 py-10 md:py-20 overflow-hidden">
+    <section className="firstSection min-h-[65vh] md:h-[80vh] px-3 py-10 md:py-20 overflow-hidden">
       <div ref={ref} className="flex flex-col md:grid md:grid-cols-5 gap-14 md:gap-10">
         <div className="col-span-1 hidden md:block"></div>
         <motion.div

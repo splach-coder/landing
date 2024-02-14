@@ -64,7 +64,7 @@ const Products = ({ openModal }) => {
     <section
       id="products"
       ref={ref}
-      className=" flex flex-col gap-10 md:grid md:grid-cols-3 mt-[15vh] md:mt-[25vh] w-full md:h-[100vh] overflow-hidden">
+      className=" flex flex-col gap-10 md:grid md:grid-cols-3 mb-10 md:mb-0  mt-[25vh] sm:mt-[10vh] md:mt-[25vh] w-full md:h-[100vh] overflow-hidden">
       <div className="con md:col-span-2 flex flex-col">
         <motion.div
           ref={elementRef}
