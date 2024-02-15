@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div
-      className={`relative ${
+      className={`relative bg-white  ${
         modal || imageModal ? "h-screen overflow-hidden" : ""
       }`}>
       <Hero openModal={openModal} />
