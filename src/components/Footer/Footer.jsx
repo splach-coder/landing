@@ -30,7 +30,7 @@ const Footer = () => {
   const elementRef = useRef(null);
 
   return (
-    <footer ref={ref} className="footer-bg py-10">
+    <footer ref={ref} className="footer-bg py-10 overflow-x-hidden">
       <div className="con flex flex-col gap-10">
         <div className="flex justify-between">
           <div>

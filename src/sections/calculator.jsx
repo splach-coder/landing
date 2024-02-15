@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { Scale, Men, Women, Spinner, ExMark } from "../assets/svgs/svgs";
 import CalculatorPage from "../components/calculatorPage/calculatorPage";
+import Tooltip from "../components/BmiToolTip/Tooltip";
 import { motion } from "framer-motion";
 
 const titleVariants = {
@@ -35,6 +36,16 @@ const Calculator = () => {
 
   const { ref, inView } = useInView({ triggerOnce: true });
   const elementRef = useRef(null);
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -118,8 +129,8 @@ const Calculator = () => {
         </svg>
       </div>
 
-      <div className="con mt-10 pt-0 md::pt-10" ref={ref}>
-        <div className="md:px-20 md:py-10 flex items-center justify-between">
+      <div className="con mt-10 pt-0" ref={ref}>
+        <div className="relative md:px-20 md:py-10 flex items-center justify-between">
           <motion.div
             ref={elementRef}
             initial="hidden"
@@ -137,9 +148,14 @@ const Calculator = () => {
             ref={elementRef}
             initial="hidden"
             animate={inView ? "visible" : ""}
-            variants={markVariants}>
+            variants={markVariants}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleMouseEnter}
+            onTouchEnd={handleMouseLeave}>
             <ExMark addStyle={"w-5 h-5 md:w-8 md:h-8 cursor-pointer"} />
           </motion.div>
+          <Tooltip isHovered={isHovered} />
         </div>
 
         {!calculationsStarts ? (
@@ -149,7 +165,7 @@ const Calculator = () => {
             animate={inView ? "visible" : ""}
             variants={mainVariants}
             className="w-full flex justify-center font-secondary mt-12">
-            <div className="w-full md:w-[40%] flex flex-col gap-10 mx-auto">
+            <div className="w-full lg:w-[40%] flex flex-col gap-10 mx-auto">
               <div className="flex flex-col md:flex-row md:items-center gap-5">
                 <label className="text-base md:text-lg leading-normal w-[200px]">
                   Select your gender :
@@ -206,7 +222,7 @@ const Calculator = () => {
                     id="weight"
                     min={0}
                     value={weight}
-                    className=" outline-none px-2 py-1 text-black"
+                    className="bg-white outline-none px-2 py-1 text-black"
                   />
 
                   <span>KG</span>
@@ -228,7 +244,7 @@ const Calculator = () => {
                     id="height"
                     value={height}
                     min={0}
-                    className=" outline-none px-2 py-1 text-black"
+                    className="bg-white outline-none px-2 py-1 text-black"
                   />
 
                   <span>CM</span>

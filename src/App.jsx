@@ -85,7 +85,7 @@ function App() {
 
       <Testimonials />
 
-      <section className="h-[30vh] flex justify-center items-center">
+      <section className="h-[30vh] bg-white flex justify-center items-center">
         <div
           ref={ref}
           className="con flex flex-col gap-8 justify-center items-center">

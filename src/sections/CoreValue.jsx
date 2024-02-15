@@ -21,7 +21,7 @@ const CoreValue = () => {
   const elementRef = useRef(null);
 
   return (
-    <section className="con h-[40vh] flex justify-center items-center">
+    <section className="con bg-white h-[40vh] flex justify-center items-center">
       <div ref={ref} className="flex flex-col justify-center items-center">
         <motion.div
            
