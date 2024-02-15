@@ -110,7 +110,7 @@ const Testimonials = () => {
 
           <div
             onClick={previousClick}
-            className={`absolute top-[50%] translate-y-[-50%] rounded-[50%] bg-white w-9 h-9 md:w-12 md:h-12 right-16 md:right-32 text-bold cursor-pointer text-3xl text-[#153750] ${
+            className={`absolute top-[50%] translate-y-[-50%] rounded-[50%] bg-white w-9 h-9 md:w-12 md:h-12 right-16 md:right-36 text-bold cursor-pointer text-3xl text-[#153750] ${
               activeCard === 1 ? "hidden" : "flex justify-center items-center"
             } shadow-lg`}>
             <Left addStyle={"w-10 h-10 me-1"} />
