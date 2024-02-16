@@ -33,7 +33,6 @@ const CoreValue = () => {
   const [confeti, setConfeti] = useState(false);
 
   const data = [
-    { option: "-40%", style: { backgroundColor: "#153750" } },
     { option: "-50%", style: { backgroundColor: "#133E59" } },
     { option: "-60%", style: { backgroundColor: "#153750" } },
     { option: "-70%", style: { backgroundColor: "#133E59" } },
