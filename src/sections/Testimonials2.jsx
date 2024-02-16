@@ -112,7 +112,7 @@ const Testimonials = () => {
           type="button"
           title="addreviewbtn"
           onClick={openPopup}
-          className="font-bold text-lg cursor-pointer border rounded-sm border-white px-6 py-3 bg-white hover:text-[#0F182B] transition-colors ease-linear duration-200 w-[150px] mx-auto flex justify-center">
+          className="font-bold text-lg cursor-pointer border rounded-sm border-white px-6 py-3 bg-[#F5F5F5] hover:text-[#0F182B] transition-colors ease-linear duration-200 w-[150px] mx-auto flex justify-center">
           <Add addStyle={"w-7 h-7"} />
         </motion.button>
       </main>

@@ -12,7 +12,7 @@ const Card = ({ card, elementRef, inView, cardVariants, index }) => {
       initial="hidden"
       animate={inView ? "visible" : ""}
       variants={cardVariants(index + 1 / 10)}
-      className={`bg-white p-2 rounded-lg min-w-[330px] max-w-[330px] h-[430px] flex flex-col gap-6 ease-linear duration-200 transition-all mx-auto`}>
+      className={`bg-[#f5f5f5] p-2 rounded-lg min-w-[330px] max-w-[330px] h-[430px] flex flex-col gap-6 ease-linear duration-200 transition-all mx-auto`}>
       <header className="relative h-[60%]">
         <div className="flex gap-2 h-full ">
           <div className="w-[50%]  h-full">

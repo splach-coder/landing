@@ -39,6 +39,7 @@ const CoreValue = () => {
     { option: "-70%", style: { backgroundColor: "#133E59" } },
     { option: "-80%", style: { backgroundColor: "#153750" } },
     { option: "-90%", style: { backgroundColor: "#133E59" } },
+    { option: "", style: { backgroundColor: "#153750" } },
   ];
 
   const handleSpinStopped = () => {
