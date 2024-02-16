@@ -38,7 +38,7 @@ const CoreValue = () => {
     { option: "-70%", style: { backgroundColor: "#133E59" } },
     { option: "-80%", style: { backgroundColor: "#153750" } },
     { option: "-90%", style: { backgroundColor: "#133E59" } },
-    { option: "", style: { backgroundColor: "#153750" } },
+    { option: "0%", style: { backgroundColor: "#153750" } },
   ];
 
   const handleSpinStopped = () => {
@@ -88,7 +88,7 @@ const CoreValue = () => {
             variants={wheelVariants}>
             <Wheel
               mustStartSpinning={mustSpin}
-              prizeNumber={5}
+              prizeNumber={4}
               data={data}
               onStopSpinning={handleSpinStopped}
               textColors={["#ffffff"]}
