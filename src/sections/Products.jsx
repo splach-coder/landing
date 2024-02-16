@@ -73,7 +73,7 @@ const Products = ({ openModal }) => {
           variants={textVariants}
           className="md:px-20 py-10 flex gap-7">
           <span>
-            <img src={stars} className="w-8 h-8" alt="" />
+            <img src={stars} className="w-8 h-8" alt="stars" loading="lazy" />
           </span>
           <span className="font-primary font-bold text-black text-2xl md:text-[40px] tracking-tighter">
             Are you motivated to lose weight <br /> as quickly as possible?
@@ -91,7 +91,7 @@ const Products = ({ openModal }) => {
               <img
                 className="w-full h-full object-contain img-bg"
                 src={aaa}
-                alt=""
+                alt="product"
                 loading="lazy"
               />
 

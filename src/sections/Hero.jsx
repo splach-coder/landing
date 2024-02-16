@@ -74,7 +74,8 @@ const Hero = () => {
             }}
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
-            className="font-secondary font-bold bg-primary rounded-[4px] py-3 px-6 flex gap-2 items-center">
+            className="font-secondary font-bold bg-primary rounded-[4px] py-3 px-6 flex gap-2 items-center"
+            aria-label="shopknow">
             Shop now
             <span className="font-primary text-xl">&rarr;</span>
           </motion.button>

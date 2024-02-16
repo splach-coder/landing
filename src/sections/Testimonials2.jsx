@@ -140,6 +140,7 @@ const Testimonials = () => {
                     src={img4}
                     className="w-full h-full object-cover"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="w-10 h-10 border border-black rounded-sm cursor-pointer">
@@ -151,6 +152,7 @@ const Testimonials = () => {
                     src={img1}
                     className="w-full h-full object-cover"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="w-10 h-10 border border-black rounded-sm cursor-pointer">
@@ -162,6 +164,7 @@ const Testimonials = () => {
                     src={img2}
                     className="w-full h-full object-cover"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="w-10 h-10 border border-black rounded-sm cursor-pointer">
@@ -173,6 +176,7 @@ const Testimonials = () => {
                     src={img3}
                     className="w-full h-full object-cover"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <motion.div
@@ -211,7 +215,7 @@ const Testimonials = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
           type="button"
-          name="addreviewbtn"
+          title="addreviewbtn"
           onClick={openPopup}
           className="font-bold text-lg cursor-pointer border rounded-sm border-white px-6 py-3 bg-white hover:text-[#0F182B] transition-colors ease-linear duration-200 w-[150px] mx-auto flex justify-center">
           <Add addStyle={"w-7 h-7"} />

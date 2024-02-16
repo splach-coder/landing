@@ -253,6 +253,7 @@ const Calculator = () => {
 
               <div className="flex items-center justify-center">
                 <motion.button
+                aria-label="calculate"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => calculateBMI(weight, height)}

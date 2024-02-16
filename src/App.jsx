@@ -68,8 +68,15 @@ function App() {
         imageModal ? "h-screen overflow-hidden" : ""
       }`}>
       <Hero />
-      
-
+      <iframe
+        className="absolute left-[50%] translate-x-[-50%] top-[65vh] sm:top-[60vh] md:top-[80vh] md:border-[15px] border-white rounded-md md:shadow-md shadow-gray-500 w-full h-[300px] md:w-[750px] md:h-[400px] p-3 md:p-0"
+        src="https://www.youtube-nocookie.com/embed/Y6JrvphGLaY?si=f53o93NnO1ZO3I60"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        loading="lazy"
+        title="youtube video about my product"
+        allowFullScreen></iframe>
+        
       <Products openModal={openImageModal} />
 
       {isMobile ? <Calculator /> : ""}
@@ -100,8 +107,9 @@ function App() {
               initial="hidden"
               animate={inView ? "visible" : ""}
               variants={buttonVariants}
-              className="bg-[#153750] py-1 px-5 md:px-7 rounded-full">
-              <a href="#hero">
+              className="bg-[#153750] py-1 px-5 md:px-7 rounded-full"
+              title="goup">
+              <a href="#hero" aria-label="go to the top">
                 <Up addStyle={"w-10 h-10"} />
               </a>
             </motion.button>
