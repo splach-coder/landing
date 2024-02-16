@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useMediaQuery } from "react-responsive";
 import { useDropzone } from "react-dropzone";
+import Stars from "react-stars";
 
 import { Success } from "../../assets/svgs/svgs";
 
@@ -16,6 +17,11 @@ function PopUp({ isOpen, closePopup }) {
   } = useForm();
   const isMobile = useMediaQuery({ maxWidth: 399 });
   const [margin, setMargin] = useState(0);
+
+  const handleRatingChange = (newRating) => {
+    console.log("New rating:", newRating);
+    // You can handle the rating change here, such as submitting it to a server
+  };
 
   const onSubmit = (data) => {
     // Handle form submission here
@@ -124,6 +130,18 @@ function PopUp({ isOpen, closePopup }) {
                     Invalid email format
                   </span>
                 )}
+              </div>
+              <div className="flex flex-col gap-2">
+                <h2>Rate this item:</h2>
+                <Stars
+                  count={5}
+                  onChange={handleRatingChange}
+                  size={24}
+                  color1={"#ccc"}
+                  color2={"#ff0"}
+                  half={false}
+                  value={0} // Initial value, you can set it to the default rating
+                />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="review">Review</label>

@@ -9,7 +9,7 @@ import Hero from "./sections/Hero";
 import Calculator from "./sections/calculator";
 import Testimonials from "./sections/Testimonials2";
 import Products from "./sections/Products";
-import CoreValue from "./sections/CoreValue";
+import CoreValue from "./sections/CoreValue2";
 
 import ImageModal from "./components/Modal/imageModal";
 import { useMediaQuery } from "react-responsive";
