@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 const ImageModal = ({ modal, closeModal, img }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

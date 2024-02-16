@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import AnimatedTexts from "../components/animatedFirstText/Text";
 import { useMediaQuery } from "react-responsive";
 
-const Hero = ({ openModal }) => {
+const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
@@ -74,9 +74,8 @@ const Hero = ({ openModal }) => {
             }}
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
-            onClick={openModal}
             className="font-secondary font-bold bg-primary rounded-[4px] py-3 px-6 flex gap-2 items-center">
-            Enroll
+            Shop now
             <span className="font-primary text-xl">&rarr;</span>
           </motion.button>
         </main>
