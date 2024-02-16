@@ -89,7 +89,7 @@ function PopUp({ isOpen, closePopup }) {
                   type="text"
                   id="fullname"
                   name="fullname"
-                  className={`px-2 py-1 border rounded-sm ${
+                  className={`px-2 py-1 border rounded-sm bg-white ${
                     errors.fullname
                       ? "border-red-500 border-opacity-100"
                       : "border-black border-opacity-80"
@@ -109,7 +109,7 @@ function PopUp({ isOpen, closePopup }) {
                   type="email"
                   id="email"
                   name="email"
-                  className={`px-2 py-1 border rounded-sm ${
+                  className={`px-2 py-1 border rounded-sm bg-white ${
                     errors.email
                       ? "border-red-500 border-opacity-100"
                       : "border-black border-opacity-80"
@@ -149,7 +149,7 @@ function PopUp({ isOpen, closePopup }) {
                   name="review"
                   id="review"
                   placeholder="Add your review"
-                  className={`px-2 py-1 border rounded-sm ${
+                  className={`px-2 py-1 border rounded-sm bg-white ${
                     errors.review
                       ? "border-red-500 border-opacity-100"
                       : "border-black border-opacity-80"
