@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import Hero from "./sections/Hero";
+import HeroLaptop from "./sections/HeroLaptop";
 import Calculator from "./sections/calculator";
 import Testimonials from "./sections/Testimonials2";
 import Products from "./sections/Products";
@@ -45,14 +46,6 @@ function App() {
       });
   }, [imageModal]);
 
-  const openModal = () => {
-    setModal(true);
-  };
-
-  const closeModal = () => {
-    setModal(false);
-  };
-
   const openImageModal = (img) => {
     setImageModal(true);
     setImageInModal(img);
@@ -67,17 +60,21 @@ function App() {
       className={`relative bg-white  ${
         imageModal ? "h-screen overflow-hidden" : ""
       }`}>
-      <Hero />
-      <iframe
-        className="absolute left-[50%] translate-x-[-50%] top-[65vh] sm:top-[60vh] md:top-[80vh] md:border-[15px] border-white rounded-md md:shadow-md shadow-gray-500 w-full h-[300px] md:w-[750px] md:h-[400px] p-3 md:p-0"
-        src="https://www.youtube-nocookie.com/embed/Y6JrvphGLaY?si=f53o93NnO1ZO3I60"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        loading="lazy"
-        title="youtube video about my product"
-        allowFullScreen></iframe>
-        
-      <Products openModal={openImageModal} />
+      {isMobile ? <Hero /> : <HeroLaptop />}
+      {isMobile ? (
+        <iframe
+          className="absolute left-[50%] translate-x-[-50%] top-[65vh] sm:top-[60vh] md:top-[80vh] md:border-[15px] border-white rounded-md md:shadow-md shadow-gray-500 w-full h-[300px] md:w-[750px] md:h-[400px] p-3 md:p-0"
+          src="https://www.youtube-nocookie.com/embed/Y6JrvphGLaY?si=f53o93NnO1ZO3I60"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          loading="lazy"
+          title="youtube video about my product"
+          allowFullScreen></iframe>
+      ) : (
+        ""
+      )}
+
+      {isMobile ? <Products openModal={openImageModal} /> : ""}
 
       {isMobile ? <Calculator /> : ""}
 
@@ -119,7 +116,8 @@ function App() {
         ""
       )}
 
-      <Footer />
+      {isMobile ? <Footer /> : ""}
+
       <ImageModal
         modal={imageModal}
         closeModal={closeImageModal}
